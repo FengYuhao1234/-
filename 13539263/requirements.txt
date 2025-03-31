@@ -1,0 +1,17 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pydantic>=1.8.0
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-huggingface>=0.0.10
+langchain-ollama>=0.0.1
+ollama>=0.1.0
+pypdf>=3.17.1
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+torch>=2.0.0
+transformers>=4.30.0
+peft>=0.5.0
+bitsandbytes>=0.41.0
+accelerate>=0.20.0
+datasets>=2.12.0 

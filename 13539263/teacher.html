@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅卷系统 - 教师端</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>阅卷系统 - 教师端</h1>
+        
+        <div class="submissions-section">
+            <h2>待批改作业</h2>
+            <div id="submissionsList"></div>
+        </div>
+
+        <div class="grading-section">
+            <h2>评分区域</h2>
+            <div id="currentSubmission"></div>
+            <div class="grade-input">
+                <input type="number" id="score" placeholder="分数" min="0" max="100">
+                <textarea id="feedback" placeholder="评语"></textarea>
+                <button onclick="submitGrade()">提交评分</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>已批改作业</h2>
+            <div id="gradedList"></div>
+        </div>
+    </div>
+    
+    <script src="js/teacher.js"></script>
+</body>
+</html> 

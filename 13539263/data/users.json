@@ -1,0 +1,26 @@
+{
+    "teachers": [
+        {
+            "username": "teacher",
+            "password": "123456",
+            "name": "教师1"
+        }
+    ],
+    "students": [
+        {
+            "username": "student1",
+            "password": "123456",
+            "name": "张三"
+        },
+        {
+            "username": "student2",
+            "password": "123456",
+            "name": "蒋新宇"
+        },
+        {
+            "username": "student3",
+            "password": "123456",
+            "name": "赵延"
+        }
+    ]
+}

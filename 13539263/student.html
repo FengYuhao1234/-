@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅卷系统 - 学生端</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>阅卷系统 - 学生端</h1>
+        
+        <div class="upload-section">
+            <h2>作业提交</h2>
+            <div class="student-info">
+                <input type="text" id="studentName" placeholder="学生姓名">
+                <input type="text" id="studentId" placeholder="学号">
+            </div>
+            <div class="file-upload">
+                <input type="file" id="assignmentFile" accept=".pdf,.doc,.docx">
+                <button onclick="submitAssignment()">提交作业</button>
+            </div>
+        </div>
+
+        <div class="status-section">
+            <h2>提交历史</h2>
+            <div id="submissionHistory"></div>
+        </div>
+    </div>
+    
+    <script src="js/student.js"></script>
+</body>
+</html> 

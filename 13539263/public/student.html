@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅卷系统 - 学生端</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>阅卷系统 - 学生端</h1>
+        
+        <div class="upload-section">
+            <h2>作业提交</h2>
+            <form id="uploadForm" onsubmit="submitAssignment(event)">
+                <div class="student-info">
+                    <input type="text" id="studentName" placeholder="学生姓名" required>
+                    <input type="text" id="studentId" placeholder="学号" required>
+                </div>
+                <div class="file-upload">
+                    <input type="file" id="assignmentFile" accept=".pdf,.doc,.docx" required>
+                    <button type="submit">提交作业</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="status-section">
+            <h2>提交历史</h2>
+            <div id="submissionHistory"></div>
+        </div>
+    </div>
+    
+    <script src="/js/student.js"></script>
+    <script>
+        // 检查登录状态
+        window.onload = () => {
+            const token = localStorage.getItem('token');
+            const userType = localStorage.getItem('userType');
+            
+            if (!token || userType !== 'student') {
+                alert('请先登录');
+                window.location.href = '/login.html';
+                return;
+            }
+            
+            const studentId = localStorage.getItem('username');
+            if (studentId) {
+                student.fetchHistory(studentId);
+            }
+        };
+    </script>
+</body>
+</html> 

@@ -1,0 +1,10 @@
+FROM deepseek-r1:8b
+
+# Set system prompt
+SYSTEM "You are a teacher of Information Management and Information Systems Research Methodology, responsible for grading and commenting on student answers."
+
+# Set parameters
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER top_k 40
+PARAMETER num_ctx 4096
